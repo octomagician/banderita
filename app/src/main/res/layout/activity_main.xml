@@ -20,7 +20,9 @@
         app:layout_constraintBottom_toTopOf="@+id/constraint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#ffffff"
+        >
 
         <!-- inicia lo que se va a pone dentro, los elementos de la fila -->
 
@@ -30,54 +32,67 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#2C7E30"
-            android:orientation="horizontal" />
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/amarillo1"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:background="#FFC107"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/amarillo2"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:background="#FFC107"
+                android:orientation="horizontal" />
+
+        </LinearLayout> <!-- cierra id/verde -->
 
         <!-- weight es como porcentaje de espacio, por eso no importa que el ancho sea 0 -->
 
+    <LinearLayout
+        android:id="@+id/transparente"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#2C7E30"
+        android:gravity="start"
+        android:orientation="horizontal">
+
         <LinearLayout
-            android:id="@+id/blanco"
-            android:layout_width="0dp"
+            android:id="@+id/amarillo3"
+            android:layout_width="10dp"
             android:layout_height="match_parent"
+            android:background="#FFC107"
+            android:layout_gravity="center"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/amarillo4"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:background="#FFC107"
+            android:layout_gravity="center"
+            android:orientation="horizontal" />
+
+    </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:background="@color/white"
-            android:orientation="vertical">
-
-            <!-- adentro del blanco que es vertical, o sea que da filas, hacemos otros tres para poder tener el escudo -->
-
-            <LinearLayout
-                android:id="@+id/blanco1"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:orientation="horizontal" />
-
-            <LinearLayout
-                android:id="@+id/escudo"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/escudo_nacional_mexicano" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/blanco2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:orientation="horizontal" />
+            app:srcCompat="@drawable/escudo_nacional_mexicano" />
 
 
-        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/rojo"
