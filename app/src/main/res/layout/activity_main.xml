@@ -54,55 +54,71 @@
 
         <!-- weight es como porcentaje de espacio, por eso no importa que el ancho sea 0 -->
 
-    <LinearLayout
-        android:id="@+id/transparente"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="#2C7E30"
-        android:gravity="start"
-        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/blanco"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#FFffff"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/amarillo3"
             android:layout_width="10dp"
             android:layout_height="match_parent"
             android:background="#FFC107"
-            android:layout_gravity="center"
             android:orientation="horizontal" />
 
-        <LinearLayout
-            android:id="@+id/amarillo4"
-            android:layout_width="10dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:background="#FFC107"
-            android:layout_gravity="center"
-            android:orientation="horizontal" />
+
+    <!-- descartado porque no se puede sin meterle otra coasa que no sea linear layout
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/escudo_nacional_mexicano" />
+  -->
+
+            <LinearLayout
+                android:id="@+id/amarillo4"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:background="#FFC107"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/rojo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#CE170A"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/amarillo5"
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFC107"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/amarillo6"
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:background="#FFC107"
+                    android:orientation="horizontal" />
 
     </LinearLayout>
 
-
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/escudo_nacional_mexicano" />
-
-
-
-        <LinearLayout
-            android:id="@+id/rojo"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#CE170A"
-            android:orientation="horizontal" />
-
-    </LinearLayout> <!-- cierra id/linear -->
+        </LinearLayout> <!-- cierra id/linear -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
